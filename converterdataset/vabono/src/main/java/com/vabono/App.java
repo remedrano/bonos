@@ -121,7 +121,7 @@ public class App
        JSONArray nodes = new JSONArray();
        JSONArray links = new JSONArray();
        
-       DecimalFormat formato = new DecimalFormat("#.00000");
+       DecimalFormat formato = new DecimalFormat("#.####");
 
                
         paises.forEach(pais->{  
@@ -150,10 +150,10 @@ public class App
             	paisesLink.put("target", "Colombia" );
             	paisesLink.put("cantidad", anio.getTotal());
             	if( anio.getAnio() == 2018) {
-            		paisesLink.put("porcentaje",(valor2018)+"%");            		
+            		paisesLink.put("porcentaje",formato.format(valor2018)+"%");            		
             	}
             	if( anio.getAnio() == 2019) {
-            		paisesLink.put("porcentaje",(valor2019+"%"));
+            		paisesLink.put("porcentaje",formato.format(valor2019)+"%");
             		
             	}
             	
@@ -166,7 +166,7 @@ public class App
         JSONObject paisesNode = new JSONObject();
 		paisesNode.put("id", "Colombia");
 		paisesNode.put("pais", "Colombia" );
-		paisesNode.put("cantidad", "1000000");
+		paisesNode.put("cantidad", "10000000");
 		paisesNode.put("porcentaje","100%");
     	nodes.add(paisesNode );
         
