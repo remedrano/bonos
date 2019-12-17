@@ -112,24 +112,19 @@
             <tbody>
                 <tr scope="row">
                     <td>Descripción </td>
-                    <td>El dataset contiene <b>17 columnas</b> con <b>19.623 filas</b> en total. Fueron utilizados <b>6
-                            columnas</b> para las gráficas. <br> De los 6 atributos seleccionados 2 fueron derivados. Unión de Fecha y Hora, y manejo de hora como timestamp dentro de Tableau.
+                    <td>El dataset contiene <b>4 columnas</b> con <b>1.785 filas</b> en total. Fueron utilizados <b>5
+                            columnas</b> para las gráficas. <br> De los 5 atributos seleccionados 1 es derivado, asociado al porcentaje respecto al total de hectáreas cultivadas en el periodo 2007 y 2012.
 					</td>
                 </tr>
                 <tr scope="row">
                     <td>Tipo </td>
-                    <td>Tabla (Campos temporales).</td>
+                    <td>Tabla.</td>
                 </tr>
-                <tr scope="row">
-                    <td>Origen </td>
-                    <td><a
-                            href="https://www.datos.gov.co/Transporte/Accidentalidad-Envigado-2016-2017-y-Primer-Semestr/t5sw-amxr">https://www.datos.gov.co/Transporte/Accidentalidad-Envigado-2016-2017-y-Primer-Semestr/t5sw-amxr</a>
-                    </td>
-                </tr>
+               
 				<tr scope="row">
                     <td>Dataset Utilizado para la gráfica </td>
                     <td><a
-						href="https://github.com/remedrano/visualanalytic/blob/master/tarea4/TAREA_4.xlsx">https://github.com/remedrano/visualanalytic/blob/master/tarea4/TAREA_4.xlsx</a>
+						href="https://github.com/remedrano/bonos/blob/master/dataset/arbolSiembraD3.xlsx">https://github.com/remedrano/bonos/blob/master/dataset/arbolSiembraD3.xlsx</a>
                     </td>
                 </tr>
             </tbody>
@@ -148,29 +143,30 @@
             <tbody>
                 <tr scope="row">
                     <td>1.</td>
-                    <td style="width: 50%">FECHA_HORA (TIMESTAMP) </td>
-                    <td>Temporal , Derivado, Secuencial, Estático</td>
+                    <td style="width: 50%">Departamento </td>
+                    <td>Categórico <td>
                 </tr>
                 <tr scope="row">
-                    <td>2.</td>
-                    <td style="width: 50%">AÑO</td>
-                    <td>Temporal, Secuencial, Derivado, Estático</td>
+                  <td>2.</td>
+                  <td style="width: 50%">Gruo de Cultivo </td>
+                  <td>Categórico <td>
+              </tr>
+              <tr scope="row">
+                <td>3.</td>
+                <td style="width: 50%">Desagregación Regional y/o Sistema Productivo </td>
+                <td>Categórico <td>
+            </tr>
+                <tr scope="row">
+                    <td>4.</td>
+                    <td style="width: 50%">Cantidad de Hectáreas</td>
+                    <td>Oredenado, Cuantitativo, Secuencial.</td>
                 </tr>
                 <tr scope="row">
-                    <td>3.</td>
-                    <td style="width: 50%">MES</td>
-                    <td>Ordenado,Cíclico, Derivado, Estático</td>
+                    <td>5.</td>
+                    <td style="width: 50%">Porcentaje</td>
+                    <td>Oredenado, Cuantitativo, Secuencial.</td>
                 </tr>
-				<tr scope="row">
-                    <td>3.</td>
-                    <td style="width: 50%">DÍA</td>
-                    <td>Ordenado, Cíclico, Estático</td>
-                </tr>
-				<tr scope="row">
-                    <td>3.</td>
-                    <td style="width: 50%">HORA</td>
-                    <td>Temporal,Cíclico, Derivado, Estático</td>
-                </tr>				
+			
 					
             </tbody>
         </table>
@@ -184,26 +180,20 @@
                         <h4>WHY</h4>
                     </th>
                 </tr>
-            </thead>
+            </thead>resumir su distribución, identificar muy rápidamente los datos atípicos de esa distribución
             <tbody>
                 <tr scope="row">
                     <td>1.</td>
                     <td style="width: 30%">Tarea Principal </td>
-                    <td>(Compare, Trends)</td>
-                    <td>Comparar tendencias sobre la cantidad de accidentes vehiculares por días de la semana entre los años 2016 a 2018 en la ciudad de Envigado-Antioquia</td>
+                    <td>(Resumir, Una distribución)</td>
+                    <td>Resumir la distribución por tipo de cultipos en cada departamento para el periodo 2007 al 2012</td>
                 </tr>
                 <tr scope="row">
                     <td>1.1</td>
                     <td style="width: 30%">Tarea secundaria</td>
-                    <td>(Compare, Similarity)</td>
-                    <td>Comparar similitudes sobre las cantidades de los accidentes vehiculares para cada día de la semana durante los años 2016 al 2018.</td>
-                </tr>
-                <tr scope="row">
-                    <td>1.2</td>
-                    <td style="width: 30%">Tarea secundaria </td>
-                    <td>(locate,outliers)</td>
-                    <td>Localizar datoa tipicos sobre las cantidades de accidentes vehiculares.</td>
-                </tr>
+                    <td>(Identificar, atípicos)</td>
+                    <td>Identificar departamentos con cantidad de hectáreas atípicos asociadas al tipo de cultivo en cada departamento </td>
+                </tr>             
             </tbody>
         </table>
     </div>
@@ -221,46 +211,34 @@
                     <tr scope="row">
                         <td>1.</td>
                         <td style="width: 30%">Marks </td>
-                        <td>Líneas</td>
-                        <td>Días de la semana</td>
-                    </tr>					
+                        <td>Área</td>
+                        <td>Departamento - Cateogorico </td>
+                    </tr>										
 					<tr scope="row">
                         <td>2.</td>
-                        <td style="width: 30%">Marks </td>
-                        <td>Puntos</td>
-                        <td>Detalle de cada punto que crece cuando pasa el mouse</td>
+                        <td style="width: 30%">Channels</td>
+                        <td>Tamaño del área</td>
+                        <td>Cantidad de hectáreas por tipo de cultivo</td>
                     </tr>
+
                     <tr scope="row">
-                        <td>3.</td>
-                        <td style="width: 30%">Channels</td>
-                        <td>Position (Eje X) - Ordered – Secuencial</td>
-                        <td>Mes y Año</td>
-                    </tr>
-					<tr scope="row">
+                            <td>3.</td>
+                            <td style="width: 30%">Channels</td>
+                            <td>Color saturación</td>
+                            <td>Porcentaje de cantidad de hectáreas por tipo de cultivo</td>
+                        </tr>                    
+                    <tr scope="row">
                         <td>4.</td>
-                        <td style="width: 30%">Channels</td>
-                        <td>Position (Eje Y) - Ordered – Quanitative</td>
-                        <td>Cantidad de accidentes vehiculares</td>
+                        <td style="width: 30%">Encode</td>
+                        <td>Separate, Order, Align</td>
+                        <td>Comparar cantidades de hectáreas</td>
                     </tr>
 
                     <tr scope="row">
                             <td>5.</td>
-                            <td style="width: 30%">Channels</td>
-                            <td>Color hue</td>
-                            <td>Distinción del día de la semana</td>
-                        </tr>                    
-                    <tr scope="row">
-                        <td>6.</td>
-                        <td style="width: 30%">Encode</td>
-                        <td>Separate, Order, Align</td>
-                        <td>Comparar tendencias de la cantidad de accidentes</td>
-                    </tr>
-
-                    <tr scope="row">
-                            <td>7.</td>
                             <td style="width: 30%">Modismo</td>
-                            <td>Separate, Order, Align</td>
-                            <td>Multi-series Line chart</td>
+                            <td>Treempa</td>
+                            <td>Áreas de departamento</td>
                         </tr>                    
                 </tbody>
             </table>
@@ -279,29 +257,8 @@
                     <tbody>
                         <tr scope="row">
                             <td>1. </td>
-                            <td>Filtro por rango de fecha.</td>
-                        </tr>
-						<tr scope="row">
-                            <td>2. </td>
-                            <td>Filtro por rango de horas</td>
-                        </tr>
-                        <tr scope="row">
-                            <td>3. </td>
-                            <td>Click en la leyenda para sobresaltar el día de la semana seleccionado.</td>
-                        </tr>
-                        <tr scope="row">
-                            <td>4. </td>
-                            <td>Filtro de Zoom.</td>
-                        </tr>
-                        <tr scope="row">
-                            <td>5. </td>
-                            <td>Selección de fila en la tabla y filtrado en las diferentes series.</td>
-                        </tr>                        
-						
-						<tr scope="row">
-                            <td>6. </td>
-                            <td>Tooltip al pasar el mouse sobre una serie que muestra el detalle por día del mes para el día seleccionado (Llama a varias gráficas internamente).</td>
-                        </tr>                    
+                            <td>Click sobre el area del departamentoiLa interacción que permite hacer zoom sobre cualquier nodo de los niveles jerárquicos ayuda a replicar estas tareas en cualquier nivel de profundidad que requiera el análisis.</td>
+                        </tr>					     								                 
                     </tbody>
                 </table>
             </div>
